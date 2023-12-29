@@ -62,7 +62,19 @@ const PlanetDetail = () => {
     }
   };
 
-  if (!clickedPlanet) return <p>Loading...</p>;
+  if (!clickedPlanet)
+    return (
+      <p
+        style={{
+          textAlign: "center",
+          color: "black",
+          fontFamily: "Work Sans",
+          fontSize: "48px",
+        }}
+      >
+        Loading...
+      </p>
+    );
 
   // Group additional planets into pairs
   const additionalPlanetPairs = [];

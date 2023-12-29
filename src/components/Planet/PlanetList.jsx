@@ -56,7 +56,19 @@ const PlanetList = ({ searchTerm }) => {
     queryClient.setQueryData(["planetsData", currentPage, 15], data);
   };
 
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading)
+    return (
+      <p
+        style={{
+          textAlign: "center",
+          color: "white",
+          fontFamily: "Work Sans",
+          fontSize: "48px",
+        }}
+      >
+        Loading...
+      </p>
+    );
   if (error) return <p>Error: {error.message}</p>;
 
   return (
